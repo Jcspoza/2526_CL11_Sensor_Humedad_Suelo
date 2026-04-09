@@ -32,6 +32,10 @@ Esta lección forma parte del los aprendizajes necesarios para controlar cargas 
   
   - M#1- ADC con potenciómetro - básico + formula de mapeo
   - M#2 - ADC con potenciómetro  un extremo a GPIO para evitar corrosión
+  - M#3
+  - M#4
+  - Calibración con M#4
+  - M#5 - mas autónoma ( sin PC)
 
 - 
 
@@ -222,15 +226,17 @@ Si queremos un aspecto mas profesional, tenemso que poder tener tipos de letra d
 
 [R2526CL11_ADC_pVgDisp_4_2.py](R2526CL11_ADC_pVgDisp_4_2.py)
 
-
-
-### M#5 - Calibración de con Sensor humedad de suelo
+### Calibración con M#4 - cambiando potenciómetro x  Sensor humedad de suelo
 
 **Usaremos el montaje M#4 cambiando potenciómetro por sensor de humedad de suelo con programa 4.2**
 
 También necesitaremos un vaso de plástico con tierra seca ( inicialmente )
 
+#### Resultados de la calibración
 
+#### Fotos Ilustrativas
+
+<img src="./doc/tierra_muy_seca.jpg" title="" alt="" width="325">
 
 ---
 
