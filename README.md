@@ -30,7 +30,8 @@ Esta lección forma parte del los aprendizajes necesarios para controlar cargas 
 
 - Estudio para **calibración** del sensor de humedad de suelo tipo Sparkfun
   
-  - M#0- ADC con potenciómetro - básico
+  - M#1- ADC con potenciómetro - básico + formula de mapeo
+  - M#2 - ADC con potenciómetro  un extremo a GPIO para evitar corrosión
 
 - 
 
@@ -82,14 +83,14 @@ Esta lección forma parte del los aprendizajes necesarios para controlar cargas 
 
 Todos los programas en microPython
 
-| Programa                                                 | Montaje | HW si Robotica y Notas                                         | Objetivo de Aprendizaje |
-| -------------------------------------------------------- | ------- | -------------------------------------------------------------- | ----------------------- |
-| [R2526CL11_ADC_poten_1_0.py](R2526CL11_ADC_poten_1_0.py) | M#0     | potenciómetro pin central en ADC0, otros 2 pines +3.3v y 0volt | Recordar lectura ADC    |
-| [R2526CL11_ADC_poten_1_1.py](R2526CL11_ADC_poten_1_1.py) | M#0     | idem + formula mapeo mas precisa                               |                         |
-|                                                          |         |                                                                |                         |
-|                                                          |         |                                                                |                         |
-|                                                          |         |                                                                |                         |
-|                                                          |         |                                                                |                         |
+| Programa                                                           | Montaje | HW si Robotica y Notas                                                            | Objetivo de Aprendizaje                              |
+| ------------------------------------------------------------------ | ------- | --------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| [R2526CL11_ADC_poten_1_0.py](R2526CL11_ADC_poten_1_0.py)           | M#1     | potenciómetro pin central en ADC0, otros 2 pines +3.3v y 0volt                    | Recordar lectura ADC                                 |
+| [R2526CL11_ADC_poten_1_1.py](R2526CL11_ADC_poten_1_1.py)           | M#1     | idem + formula mapeo mas precisa                                                  |                                                      |
+| [R2526CL11_ADC_potVccgpio_2_0.py](R2526CL11_ADC_potVccgpio_2_0.py) | M#2     | potenciómetro uno de los ines extremso a GPIO21 -> evitar corrosión + excepciones | simular montaje de sensor  humedad con potenciómetro |
+| [R2526CL11_ADC_potVccgpio_2_1.py](R2526CL11_ADC_potVccgpio_2_1.py) | M#2     | mejoras de presentación , misma linea                                             | idem                                                 |
+| [Rbhwt_sh1106_1_0.py](Rbhwt_sh1106_1_0.py)                         | M#3     | prueba basica de HW del display SH1106                                            |                                                      |
+| [R2526CL11_ADC_pVgDisp_3_3.py](R2526CL11_ADC_pVgDisp_3_3.py)       | M#3     | Añadir display b/n SH1106                                                         | Hacer el montaje mas autónomo ( sin pc)              |
 
 ---
 
@@ -133,35 +134,63 @@ CONEXIONES :
 
     los otros 2 pines del potenciómetro a +3.3 y 0 volt respectivamente => **en los siguiente montajes cambiaremos esto**
 
-#### <u>Programas M#0</u>
+#### <u>Programas M#1</u>
 
 [R2526CL11_ADC_poten_1_0.py](R2526CL11_ADC_poten_1_0.py)
 
 Tanto el programa, como el montaje HW son básico. Nos interesa ver la conversión de los valores leídos en 16 bis a voltaje **y medir con el polímetro que el voltaje es correcto**
 
-
-
 [R2526CL11_ADC_poten_1_1.py](R2526CL11_ADC_poten_1_1.py)
 
-La version 1.1 usa un a formula de conversión mas precisa , solo por conocer como se "mapean" valores. NO la usaremos porque no necesitamos tanta precision
+La version 1.1 usa un a formula de conversión mas precisa , solo por conocer como se "mapean" valores. NO la usaremos porque no necesitamos tanta precisión.
 
-### M#1 - Potenciómetro en ADC0 cambiando pin 3,3volt a GPIO
+**Recordar uso de ploter en monitor de Thonny** : mejor solo una variable o si son 2 que tengan limites similares
+
+### M#2 - ADC con potenciómetro : un extremo a GPIO para evitar corrosión
 
 Siguiendo la recomendación de la guia de Sparkfun 
 
 [Soil Moisture Sensor Hookup Guide - SparkFun Learn](https://learn.sparkfun.com/tutorials/soil-moisture-sensor-hookup-guide)
 
-NO vamos a alimentar el sensor de humedad de forma continua, para evitar corrosión:
+**NO vamos a alimentar el sensor de humedad de forma continua, para evitar corrosión:**
 
 "You need to supply power to VCC and GND. We recommend not powering the sensor constantly to prevent corrosion of the probes (more on this in a bit). SIG provides an analog signal out that can be attached to the ADC pin on any microcontroller. The value read on SIG will vary depending on the voltage with which you power the sensor."
 
-Vamos a simular este montaje primero con un potenciómetro, donde uno de los pines extremos lo conectaremos a un GPIO en vez de a 3,3 volt. cunado queramso leer el sensor popndreomos a High el pin que 'alimenta' el potenciometro. Usaremso el GPIO21 por cercania
+Vamos a simular este montaje primero con un potenciómetro, donde uno de los pines extremos lo conectaremos a un GPIO en vez de a 3,3 volt. cunado queramso leer el sensor popndreomos a High el pin que 'alimenta' el potenciómetro. Usaremos el GPIO21 por cercania
 
-#### <u>Programa M#1</u>
+#### <u>Programas M#2</u>
 
-De nuevo tanto el programa, como el montaje HW con potenciometro son básico, solo queremos ver si lee sin problemas 
+El montaje HW con potenciómetro es básico, pero en el programa usaremos una **excepción** para salir del bucle por teclado. pero de nuevo, solo queremos ver si lee sin problemas 
 
-Si quisiéramos ver que la conversión es correcta con un polímetro hay que ampliar el tiempo en high 
+Conversion : usamso la formula simple, porque no vamos a necesitar precisión. Si quisiéramos ver que la conversión es correcta con un polímetro hay que ampliar el tiempo en high 
+
+[R2526CL11_ADC_potVccgpio_2_0.py](R2526CL11_ADC_potVccgpio_2_0.py)
+
+[R2526CL11_ADC_potVccgpio_2_1.py](R2526CL11_ADC_potVccgpio_2_1.py)
+
+El 2.1 incluye mejoras visuales : print en la misma linea + en la excepción retorno de carro antes de mensaje
+
+### M#3 - ADC con potenciómetro un extremo a GPIO + Display b/n SH1106
+
+Añadimos un **display SH1106** para hacer el montaje autónomo = que no tenga que estar conectado al PC para leer valores. En los montajes #3 y #4 , seguiremos con conexión al PC para monitorear mejor.
+
+#### Asegurar Display
+
+Conectamos display siguiendo esquema de clase 10 del año pasado, [2425CL10_DisplayGrafSH1106](https://github.com/Jcspoza/2425CL10_DisplayGrafSH1106)
+
+en GPIO04 y 05 para el bus I2C 0
+
+y hacemos un check de HW con el programa basicHWtest del display sh1106
+
+[Rbhwt_sh1106_1_0.py](Rbhwt_sh1106_1_0.py)
+
+#### Programa M#3
+
+Se ha subido solo la version 3.3 del programa que incluye algunas mejoras visuales, respecto a versiones mas básicas en el manejo del display (no incluidas)
+
+[R2526CL11_ADC_pVgDisp_3_3.py](R2526CL11_ADC_pVgDisp_3_3.py)
+
+.
 
 ---
 

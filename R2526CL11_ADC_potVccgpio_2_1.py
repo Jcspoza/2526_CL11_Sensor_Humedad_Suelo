@@ -7,7 +7,7 @@
 # Licencia : CC BY-NC-SA 4.0
 # REf basica https://docs.sunfounder.com/projects/pico-2w-kit/en/latest/pyproject/py_water.html
 # 1.0 -> 2.0 pin extremo potenciometro a GPIO21 + tiempo high
-# 2.0 -> 2.0 mas velocidad lectura, print en misma linea 
+# 2.0 -> 2.1 mas velocidad lectura, print en misma linea 
 
 from machine import ADC
 from time import sleep
@@ -31,8 +31,8 @@ potentiometer = machine.ADC(POTENCIOMETRO_ADC)
 alimentaSensor = machine.Pin(21, machine.Pin.OUT)
 MAXVOLT = 3.05
 FACTOR_CONVERSION = MAXVOLT / (65535)
-TIEMPOHIGH = 4
-ESPERA = 1
+TIEMPOHIGH = 0.1
+ESPERA = 0.4
 
 # 2- Bucle de lectura
 try:
@@ -48,5 +48,5 @@ try:
                 
 except KeyboardInterrupt:
     alimentaSensor.off()
-    print("Parada de usuario")
+    print("\nParada de usuario")
     
