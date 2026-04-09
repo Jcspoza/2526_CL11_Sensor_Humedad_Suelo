@@ -100,7 +100,7 @@ Todos los programas en microPython
 | [Rbhwt_sh1106_writer_1_0.py](Rbhwt_sh1106_writer_1_0.py)           | M#4     | prueba basica de letra grande en display SH1106                                   | requiere libreria 'sh1106.py' + 'writer.py' + una fuente de letra       |
 | [R2526CL11_ADC_pVgDisp_4_0.py](R2526CL11_ADC_pVgDisp_4_0.py)       | M#4     | leer pot con Vcc en gpio21 + sh1106 + letra grande                                | requiere libreria 'sh1106.py' + 'writer.py' + una fuente de letra       |
 | [R2526CL11_ADC_pVgDisp_4_1.py](R2526CL11_ADC_pVgDisp_4_1.py)       |         | idem con mejoras 1                                                                | requiere libreria 'sh1106.py' + 'writer.py' + una fuente de letra       |
-| [R2526CL11_ADC_pVgDisp_4_2.py](R2526CL11_ADC_pVgDisp_4_0.py)       |         | idem con mejoras 2                                                                |                                                                         |
+| [R2526CL11_ADC_pVgDisp_4_2.py](R2526CL11_ADC_pVgDisp_4_2.py)       |         | idem con mejoras 2                                                                |                                                                         |
 
 ---
 
@@ -220,7 +220,17 @@ Si queremos un aspecto mas profesional, tenemso que poder tener tipos de letra d
 
 [R2526CL11_ADC_pVgDisp_4_1.py](R2526CL11_ADC_pVgDisp_4_0.py)
 
-[R2526CL11_ADC_pVgDisp_4_2.py](R2526CL11_ADC_pVgDisp_4_0.py)
+[R2526CL11_ADC_pVgDisp_4_2.py](R2526CL11_ADC_pVgDisp_4_2.py)
+
+
+
+### M#5 - Calibración de con Sensor humedad de suelo
+
+**Usaremos el montaje M#4 cambiando potenciómetro por sensor de humedad de suelo con programa 4.2**
+
+También necesitaremos un vaso de plástico con tierra seca ( inicialmente )
+
+
 
 ---
 
