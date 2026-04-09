@@ -74,24 +74,31 @@ Esta lección forma parte del los aprendizajes necesarios para controlar cargas 
 
 ### Librerías usadas
 
-| Libreria               | Uso para                                                                                                     | Link                                                                       |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- |
-| [sh1106.py](sh1106.py) | manejo del display b/n grafico SH1106 de 1.3 pulgadas y128 x 64 pixeles                                      | [https://github.com/robert-hh/SH1106](https://github.com/robert-hh/SH1106) |
-| [writer.py](writer.py) | Permite el uso de varios tipos y tamaños de letra en displays b/n, como el ssd1306 y el SH1106 ( el nuestro) |                                                                            |
-|                        |                                                                                                              |                                                                            |
+Comprobar que estén en la menoría de la PICO y preferentemente en /lib. si no estan copiar los ficheros a /lib
+
+Seguramente 'writer.py' no estará.
+
+| Libreria                       | Uso para                                                                                                     | Link                                                                                                                                               |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [sh1106.py](sh1106.py)         | manejo del display b/n grafico SH1106 de 1.3 pulgadas y128 x 64 pixeles                                      | [https://github.com/robert-hh/SH1106](https://github.com/robert-hh/SH1106)                                                                         |
+| [writer.py](writer.py)         | Permite el uso de varios tipos y tamaños de letra en displays b/n, como el ssd1306 y el SH1106 ( el nuestro) | [https://github.com/peterhinch/micropython-font-to-py/tree/master/writer](https://github.com/peterhinch/micropython-font-to-py/tree/master/writer) |
+| [freesans20.py](freesans20.py) | Letra alternativa a usar con writer                                                                          |                                                                                                                                                    |
+| [inkfree20.py](inkfree20.py)   | Letra alternativa a usar con writer                                                                          |                                                                                                                                                    |
 
 ### Tabla resumen de programas
 
 Todos los programas en microPython
 
-| Programa                                                           | Montaje | HW si Robotica y Notas                                                            | Objetivo de Aprendizaje                              |
-| ------------------------------------------------------------------ | ------- | --------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| [R2526CL11_ADC_poten_1_0.py](R2526CL11_ADC_poten_1_0.py)           | M#1     | potenciómetro pin central en ADC0, otros 2 pines +3.3v y 0volt                    | Recordar lectura ADC                                 |
-| [R2526CL11_ADC_poten_1_1.py](R2526CL11_ADC_poten_1_1.py)           | M#1     | idem + formula mapeo mas precisa                                                  |                                                      |
-| [R2526CL11_ADC_potVccgpio_2_0.py](R2526CL11_ADC_potVccgpio_2_0.py) | M#2     | potenciómetro uno de los ines extremso a GPIO21 -> evitar corrosión + excepciones | simular montaje de sensor  humedad con potenciómetro |
-| [R2526CL11_ADC_potVccgpio_2_1.py](R2526CL11_ADC_potVccgpio_2_1.py) | M#2     | mejoras de presentación , misma linea                                             | idem                                                 |
-| [Rbhwt_sh1106_1_0.py](Rbhwt_sh1106_1_0.py)                         | M#3     | prueba basica de HW del display SH1106                                            |                                                      |
-| [R2526CL11_ADC_pVgDisp_3_3.py](R2526CL11_ADC_pVgDisp_3_3.py)       | M#3     | Añadir display b/n SH1106                                                         | Hacer el montaje mas autónomo ( sin pc)              |
+| Programa                                                           | Montaje | HW si Robotica y Notas                                                            | Objetivo de Aprendizaje                                                 |
+| ------------------------------------------------------------------ | ------- | --------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| [R2526CL11_ADC_poten_1_0.py](R2526CL11_ADC_poten_1_0.py)           | M#1     | potenciómetro pin central en ADC0, otros 2 pines +3.3v y 0volt                    | Recordar lectura ADC                                                    |
+| [R2526CL11_ADC_poten_1_1.py](R2526CL11_ADC_poten_1_1.py)           | M#1     | idem + formula mapeo mas precisa                                                  |                                                                         |
+| [R2526CL11_ADC_potVccgpio_2_0.py](R2526CL11_ADC_potVccgpio_2_0.py) | M#2     | potenciómetro uno de los ines extremso a GPIO21 -> evitar corrosión + excepciones | simular montaje de sensor  humedad con potenciómetro                    |
+| [R2526CL11_ADC_potVccgpio_2_1.py](R2526CL11_ADC_potVccgpio_2_1.py) | M#2     | mejoras de presentación , misma linea                                             | idem                                                                    |
+| [Rbhwt_sh1106_1_0.py](Rbhwt_sh1106_1_0.py)                         | M#3     | Prueba basica de HW del display SH1106                                            | requiere libreria 'sh1106.py'                                           |
+| [R2526CL11_ADC_pVgDisp_3_3.py](R2526CL11_ADC_pVgDisp_3_3.py)       | M#3     | Añadir display b/n SH1106                                                         | Hacer el montaje mas autónomo ( sin pc) + requiere libreria 'sh1106.py' |
+| [Rbhwt_sh1106_writer_1_0.py](Rbhwt_sh1106_writer_1_0.py)           | M#4     | prueba basica de letra grande en display SH1106                                   | requiere libreria 'sh1106.py' + 'writer.py'                             |
+|                                                                    |         |                                                                                   |                                                                         |
 
 ---
 
@@ -191,7 +198,25 @@ Se ha subido solo la version 3.3 del programa que incluye algunas mejoras visual
 
 [R2526CL11_ADC_pVgDisp_3_3.py](R2526CL11_ADC_pVgDisp_3_3.py)
 
-.
+
+
+### M#4 - ADC con potenciómetro un extremo a GPIO + Display b/n SH1106 + Letra grande y diferente con 'writer'
+
+Si queremos un aspecto mas profesional, tenemso que poder tener tipos de letra distintos y de mas tamaños 
+
+#### Asegurar Display + letra grande (20 x 20)
+
+1. Instalamos la libreria 'writer.py' si no estuviera en la PICO (mejor en /lib) , 
+
+2. copiamos la letra a usar en raiz de la pico , por ejemplo [freesans20.py](freesans20.py)
+
+3. y hacemos un test básico 
+
+[Rbhwt_sh1106_writer_1_0.py](Rbhwt_sh1106_writer_1_0.py)
+
+
+
+#### Programas M#4
 
 ---
 
