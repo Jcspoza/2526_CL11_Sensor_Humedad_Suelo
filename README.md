@@ -37,11 +37,9 @@ Esta lección forma parte del los aprendizajes necesarios para controlar cargas 
   - Calibración con M#4
   - M#5 - mas autónoma ( sin PC)
 
-- 
-
 - TO DO y Notas
-  
-  ---
+
+- ---
 
 ## Resumen inicial
 
@@ -110,7 +108,7 @@ Todos los programas en microPython
 
 ## Panorama de Sensores de humedad de suelo
 
-Hay 2 tipòs de sensores de humedad :
+Hay 2 tipos de sensores de humedad :
 
 1. **Resistivos**: a su vez hay 2 circuitos tipicos
    
@@ -234,12 +232,35 @@ También necesitaremos un vaso de plástico con tierra seca ( inicialmente )
 
 #### Resultados de la calibración
 
+Tenemos un rango de 1 voltio, comenzando en 0,9 volt con la tierra seca y acabando en 1,8 con al tierra totalmente anegada
+
+| Situacion                        | Valor voltios | Resistencia Polimetro |
+| -------------------------------- | ------------- | --------------------- |
+| al aire                          | 0,03 volt     |                       |
+| Tierra muy seca                  | 0.92 volt     | 2,4 M ohm             |
+| un poco de agua                  | 1,63 volt     | 223 k ohm             |
+| Encharcada  de agua              | 1.79 volt     | 103 k ohm             |
+| Maximo encharcada de agua        | 1.85 volt     |                       |
+| Sensor en vaso de agua del grifo | 1,95 volt     |                       |
+
 #### Fotos Ilustrativas
 
-<img src="./doc/tierra_muy_seca.jpg" title="" alt="" width="325">
+Con la **tierra seca** , el polímetro ha medido desde 8,23 Mohm a 2,4 M ohm
+
+| Tierra SECA - solo medida de resistencia                             | Tierra seca : 0,92volt y 2,4 Mohm                                    |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| <img src="./doc/tierra_muy_seca.jpg" title="" alt="" width="325">    | <img src="./doc/tierra_seca.jpg" title="" alt="" width="325">        |
+| **Tierra con algo de humedad** 1,63 volt y 223 Kohm                  | **Tierra muy húmeda** 1,79 volt 101 Kohm                             |
+| <img src="./doc/tierra_poco_humeda.jpg" title="" alt="" width="325"> | <img src="./doc/tierra_todo_humeda.jpg" title="" alt="" width="325"> |
+
+### M#5 - Dar autonomía al montaje =  sin PC
+
+Ahora que el display da los resultados de forma fiable, para hacer mas autonomo el montaje :
+
+1. El **cierre del programa** ya no puede ser por teclado del PC --> pulsador de display 'BACK'. necesitamos incluir los pulsadores para comandar el programa , o al menso 1 pulsador
+
+2. **SIN PC** : Probar con el programa en Pico con nombre 'main.py' + power bank de 5 volt o similar
 
 ---
-
-### 
 
 ## TO DO y Notas
