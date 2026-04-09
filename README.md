@@ -74,10 +74,11 @@ Esta lección forma parte del los aprendizajes necesarios para controlar cargas 
 
 ### Librerías usadas
 
-| Libreria | Uso para                                                                                                     | Link |
-| -------- | ------------------------------------------------------------------------------------------------------------ | ---- |
-| writer   | Permite el uso de varios tipos y tamaños de letra en displays b/n, como el ssd1306 y el SH1106 ( el nuestro) |      |
-|          |                                                                                                              |      |
+| Libreria               | Uso para                                                                                                     | Link                                                                       |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- |
+| [sh1106.py](sh1106.py) | manejo del display b/n grafico SH1106 de 1.3 pulgadas y128 x 64 pixeles                                      | [https://github.com/robert-hh/SH1106](https://github.com/robert-hh/SH1106) |
+| [writer.py](writer.py) | Permite el uso de varios tipos y tamaños de letra en displays b/n, como el ssd1306 y el SH1106 ( el nuestro) |                                                                            |
+|                        |                                                                                                              |                                                                            |
 
 ### Tabla resumen de programas
 
