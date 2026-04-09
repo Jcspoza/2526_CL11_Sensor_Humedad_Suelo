@@ -245,9 +245,13 @@ Tenemos un rango de 1 voltio, comenzando en 0,9 volt con la tierra seca y acaban
 
 #### Fotos Ilustrativas
 
-Con la **tierra seca** , el polímetro ha medido desde 8,23 Mohm a 2,4 M ohm
+Con la **tierra seca** , el polímetro ha medido desde 8,23 Mohm a 2,4 M ohm, en el primer caso con tierra extremadamente seca, y en el segundo con tierra tomada del campo, contando que habia llovido hacia unos días, con una lectura de 0,92 volt
 
-| Tierra SECA - solo medida de resistencia                             | Tierra seca : 0,92volt y 2,4 Mohm                                    |
+
+
+Las **puntas del sensor introducidas en agua del grifo** han dado **1,95 volt**, pendiente media de resitencia
+
+| Tierra SECA Extrema - solo medida de resistencia                     | Tierra del campo (lluvias hace días) : 0,92volt y 2,4 Mohm           |
 | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | <img src="./doc/tierra_muy_seca.jpg" title="" alt="" width="325">    | <img src="./doc/tierra_seca.jpg" title="" alt="" width="325">        |
 | **Tierra con algo de humedad** 1,63 volt y 223 Kohm                  | **Tierra muy húmeda** 1,79 volt 101 Kohm                             |
