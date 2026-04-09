@@ -97,8 +97,10 @@ Todos los programas en microPython
 | [R2526CL11_ADC_potVccgpio_2_1.py](R2526CL11_ADC_potVccgpio_2_1.py) | M#2     | mejoras de presentación , misma linea                                             | idem                                                                    |
 | [Rbhwt_sh1106_1_0.py](Rbhwt_sh1106_1_0.py)                         | M#3     | Prueba basica de HW del display SH1106                                            | requiere libreria 'sh1106.py'                                           |
 | [R2526CL11_ADC_pVgDisp_3_3.py](R2526CL11_ADC_pVgDisp_3_3.py)       | M#3     | Añadir display b/n SH1106                                                         | Hacer el montaje mas autónomo ( sin pc) + requiere libreria 'sh1106.py' |
-| [Rbhwt_sh1106_writer_1_0.py](Rbhwt_sh1106_writer_1_0.py)           | M#4     | prueba basica de letra grande en display SH1106                                   | requiere libreria 'sh1106.py' + 'writer.py'                             |
-|                                                                    |         |                                                                                   |                                                                         |
+| [Rbhwt_sh1106_writer_1_0.py](Rbhwt_sh1106_writer_1_0.py)           | M#4     | prueba basica de letra grande en display SH1106                                   | requiere libreria 'sh1106.py' + 'writer.py' + una fuente de letra       |
+| [R2526CL11_ADC_pVgDisp_4_0.py](R2526CL11_ADC_pVgDisp_4_0.py)       | M#4     | leer pot con Vcc en gpio21 + sh1106 + letra grande                                | requiere libreria 'sh1106.py' + 'writer.py' + una fuente de letra       |
+| [R2526CL11_ADC_pVgDisp_4_1.py](R2526CL11_ADC_pVgDisp_4_1.py)       |         | idem con mejoras 1                                                                | requiere libreria 'sh1106.py' + 'writer.py' + una fuente de letra       |
+| [R2526CL11_ADC_pVgDisp_4_2.py](R2526CL11_ADC_pVgDisp_4_0.py)       |         | idem con mejoras 2                                                                |                                                                         |
 
 ---
 
@@ -198,8 +200,6 @@ Se ha subido solo la version 3.3 del programa que incluye algunas mejoras visual
 
 [R2526CL11_ADC_pVgDisp_3_3.py](R2526CL11_ADC_pVgDisp_3_3.py)
 
-
-
 ### M#4 - ADC con potenciómetro un extremo a GPIO + Display b/n SH1106 + Letra grande y diferente con 'writer'
 
 Si queremos un aspecto mas profesional, tenemso que poder tener tipos de letra distintos y de mas tamaños 
@@ -214,9 +214,13 @@ Si queremos un aspecto mas profesional, tenemso que poder tener tipos de letra d
 
 [Rbhwt_sh1106_writer_1_0.py](Rbhwt_sh1106_writer_1_0.py)
 
-
-
 #### Programas M#4
+
+[R2526CL11_ADC_pVgDisp_4_0.py](R2526CL11_ADC_pVgDisp_4_0.py)
+
+[R2526CL11_ADC_pVgDisp_4_1.py](R2526CL11_ADC_pVgDisp_4_0.py)
+
+[R2526CL11_ADC_pVgDisp_4_2.py](R2526CL11_ADC_pVgDisp_4_0.py)
 
 ---
 
