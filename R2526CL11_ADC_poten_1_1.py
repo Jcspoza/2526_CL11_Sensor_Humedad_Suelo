@@ -27,10 +27,10 @@ print(f"Program: {p_project} - Version: {p_version}")
 
 POTENCIOMETRO_ADC = 0 # es el ADC0
 potentiometer = machine.ADC(POTENCIOMETRO_ADC)
-MAXVOLT = 3.27
-MINVOLT = 0.002
+MAXVOLT = 3.30
+MINVOLT = 0.0002
 MAXU16 = 65535
-MINU16 = 320
+MINU16 = 64
 FACTOR_CONVERSION = (MAXVOLT - MINVOLT) / (MAXU16 - MINU16)
 
 # 2- Bucle de lectura
