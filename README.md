@@ -98,25 +98,25 @@ Seguramente 'writer.py' no estará.
 
 Todos los programas en microPython
 
-| Programa                                                           | Montaje | HW si Robotica y Notas                                                            | Objetivo de Aprendizaje                                                                 |
-| ------------------------------------------------------------------ | ------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| [R2526CL11_ADC_poten_1_0.py](R2526CL11_ADC_poten_1_0.py)           | M#1     | potenciómetro pin central en ADC0, otros 2 pines +3.3v y 0volt                    | Recordar lectura ADC                                                                    |
-| [R2526CL11_ADC_poten_1_1.py](R2526CL11_ADC_poten_1_1.py)           | M#1     | idem + formula mapeo mas precisa                                                  |                                                                                         |
-| [R2526CL11_ADC_potVccgpio_2_0.py](R2526CL11_ADC_potVccgpio_2_0.py) | M#2     | potenciómetro uno de los ines extremso a GPIO21 -> evitar corrosión + excepciones | simular montaje de sensor  humedad con potenciómetro                                    |
-| [R2526CL11_ADC_potVccgpio_2_1.py](R2526CL11_ADC_potVccgpio_2_1.py) | M#2     | mejoras de presentación , misma linea                                             | idem                                                                                    |
-| [Rbhwt_sh1106_1_0.py](Rbhwt_sh1106_1_0.py)                         | M#3     | **Prueba básica** de HW del display SH1106                                        | requiere libreria 'sh1106.py'                                                           |
-| [R2526CL11_ADC_pVgDisp_3_3.py](R2526CL11_ADC_pVgDisp_3_3.py)       | M#3     | Añadir display b/n SH1106                                                         | Hacer el montaje mas autónomo ( sin pc) + requiere libreria 'sh1106.py'                 |
-| [Rbhwt_sh1106_writer_1_0.py](Rbhwt_sh1106_writer_1_0.py)           | M#4     | **prueba basica** de letra grande en display SH1106                               | requiere libreria 'sh1106.py' + 'writer.py' + una fuente de letra                       |
-| [R2526CL11_ADC_pVgDisp_4_0.py](R2526CL11_ADC_pVgDisp_4_0.py)       | M#4     | leer pot con Vcc en gpio21 + sh1106 + letra grande                                | requiere libreria 'sh1106.py' + 'writer.py' + una fuente de letra                       |
-| [R2526CL11_ADC_pVgDisp_4_1.py](R2526CL11_ADC_pVgDisp_4_1.py)       | M#4     | idem con mejoras 1                                                                | requiere libreria 'sh1106.py' + 'writer.py' + una fuente de letra                       |
-| [R2526CL11_ADC_pVgDisp_4_2.py](R2526CL11_ADC_pVgDisp_4_2.py)       | M#4     | idem con mejoras 2                                                                |                                                                                         |
-| [Rbhwt_sh1106RE3sw_Testsw1_0.py](Rbhwt_sh1106RE3sw_Testsw1_0.py)   | M#5     | **prueba básic**a de manejo de <u>1 pulsador </u>con interrupciones               |                                                                                         |
-| [Rbhwt_sh1106RE3sw_Test3sw1_0.py](Rbhwt_sh1106RE3sw_Test3sw1_0.py) | M#5     | **prueba básic**a de manejo de <u>3 pulsadores </u>con interrupciones             | Tiene un truco l leer el pin que provoco la interrupción, esta explicado en comentarios |
-| [R2526CL11_ADC_pVgDisp_5_0.py](R2526CL11_ADC_pVgDisp_5_0.py)       | M#5     |                                                                                   |                                                                                         |
-| [R2526CL11_ADC_pVgDisp_5_1.py](R2526CL11_ADC_pVgDisp_5_1.py)       | M#5     |                                                                                   |                                                                                         |
-| [R2526CL11_ADC_pVgDisp_5F_1.py](R2526CL11_ADC_pVgDisp_5F_1.py)     | M#5     |                                                                                   |                                                                                         |
-| [R2526CL11_ADC_pVgDisp_5Ex_1.py](R2526CL11_ADC_pVgDisp_5Ex_1.py)   | M#5     |                                                                                   |                                                                                         |
-| [R2526CL11_ADC_pVgDisp_5F_2.py](R2526CL11_ADC_pVgDisp_5F_2.py)     | M#5     |                                                                                   |                                                                                         |
+| Programa                                                           | Montaje | HW si Robotica y Notas                                                                  | Objetivo de Aprendizaje                                                                 |
+| ------------------------------------------------------------------ | ------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| [R2526CL11_ADC_poten_1_0.py](R2526CL11_ADC_poten_1_0.py)           | M#1     | potenciómetro pin central en ADC0, otros 2 pines +3.3v y 0volt                          | Recordar lectura ADC                                                                    |
+| [R2526CL11_ADC_poten_1_1.py](R2526CL11_ADC_poten_1_1.py)           | M#1     | idem + formula mapeo mas precisa                                                        |                                                                                         |
+| [R2526CL11_ADC_potVccgpio_2_0.py](R2526CL11_ADC_potVccgpio_2_0.py) | M#2     | potenciómetro uno de los ines extremso a GPIO21 -> evitar corrosión + excepciones       | simular montaje de sensor  humedad con potenciómetro                                    |
+| [R2526CL11_ADC_potVccgpio_2_1.py](R2526CL11_ADC_potVccgpio_2_1.py) | M#2     | mejoras de presentación , misma linea                                                   | idem                                                                                    |
+| [Rbhwt_sh1106_1_0.py](Rbhwt_sh1106_1_0.py)                         | M#3     | **Prueba básica** de HW del display SH1106                                              | requiere libreria 'sh1106.py'                                                           |
+| [R2526CL11_ADC_pVgDisp_3_3.py](R2526CL11_ADC_pVgDisp_3_3.py)       | M#3     | Añadir display b/n SH1106                                                               | Hacer el montaje mas autónomo ( sin pc) + requiere libreria 'sh1106.py'                 |
+| [Rbhwt_sh1106_writer_1_0.py](Rbhwt_sh1106_writer_1_0.py)           | M#4     | **prueba basica** de letra grande en display SH1106                                     | requiere libreria 'sh1106.py' + 'writer.py' + una fuente de letra                       |
+| [R2526CL11_ADC_pVgDisp_4_0.py](R2526CL11_ADC_pVgDisp_4_0.py)       | M#4     | leer pot con Vcc en gpio21 + sh1106 + letra grande                                      | requiere libreria 'sh1106.py' + 'writer.py' + una fuente de letra                       |
+| [R2526CL11_ADC_pVgDisp_4_1.py](R2526CL11_ADC_pVgDisp_4_1.py)       | M#4     | idem con mejoras 1                                                                      | requiere libreria 'sh1106.py' + 'writer.py' + una fuente de letra                       |
+| [R2526CL11_ADC_pVgDisp_4_2.py](R2526CL11_ADC_pVgDisp_4_2.py)       | M#4     | idem con mejoras 2                                                                      |                                                                                         |
+| [Rbhwt_sh1106RE3sw_Testsw1_0.py](Rbhwt_sh1106RE3sw_Testsw1_0.py)   | M#5     | **prueba básic**a de manejo de <u>1 pulsador </u>con interrupciones                     |                                                                                         |
+| [Rbhwt_sh1106RE3sw_Test3sw1_0.py](Rbhwt_sh1106RE3sw_Test3sw1_0.py) | M#5     | **prueba básic**a de manejo de <u>3 pulsadores </u>con interrupciones                   | Tiene un truco l leer el pin que provoco la interrupción, esta explicado en comentarios |
+| [R2526CL11_ADC_pVgDisp_5_0.py](R2526CL11_ADC_pVgDisp_5_0.py)       | M#5     | Incorpora a 4.2 la lectura de pulsadores y , de momento no hace nada con ello           | Ver como incorporar de forma basica los pulsadores a un montaje                         |
+| [R2526CL11_ADC_pVgDisp_5_1.py](R2526CL11_ADC_pVgDisp_5_1.py)       | M#5     | idem usando una función para tratamiento 'futuro' de la tecla pulsada                   |                                                                                         |
+| [R2526CL11_ADC_pVgDisp_5F_1.py](R2526CL11_ADC_pVgDisp_5F_1.py)     | M#5     | Si pulso back salgo del programa de forma limpia con **control de FLUJO**               |                                                                                         |
+| [R2526CL11_ADC_pVgDisp_5Ex_1.py](R2526CL11_ADC_pVgDisp_5Ex_1.py)   | M#5     | Si pulso back salgo del programa de forma limpia **con Excepción definida por usuario** |                                                                                         |
+| [R2526CL11_ADC_pVgDisp_5F_2.py](R2526CL11_ADC_pVgDisp_5F_2.py)     | M#5     | Elijo el control de flujo por ser mas simple, v2 con mejoras visuales                   |                                                                                         |
 
 ---
 
@@ -279,11 +279,36 @@ Ahora que el display da los resultados de forma fiable, para hacer mas autónomo
 
 Pasos que vamos a seguir
 
-- Recordar manejo de pulsadores con interrupciones
+- **Recordar** manejo de pulsadores con interrupciones:
+  
+  - Manejo de 1 solo pulsador
+    - [Rbhwt_sh1106RE3sw_Testsw1_0.py](Rbhwt_sh1106RE3sw_Testsw1_0.py)
+  - manejo de los 3 pulsadores con una sola funcion de manejo ( es algo lioso)
+    - [Rbhwt_sh1106RE3sw_Test3sw1_0.py](Rbhwt_sh1106RE3sw_Test3sw1_0.py)
+
 - Leer pulsadores en M#5 : ADC con potenciómetro 1 extremo a GPIO + Display + letra grande + **leo pulsadores**
-- Si pulso "BACK" salgo del programa
-  - Excepciones definidas por el programador
-  - Excepciones versus control de flujo : **mejor control de Flujo**
+  
+  - [R2526CL11_ADC_pVgDisp_5_0.py](R2526CL11_ADC_pVgDisp_5_0.py)
+  - [R2526CL11_ADC_pVgDisp_5_1.py](R2526CL11_ADC_pVgDisp_5_1.py) idem usando una función para tratamiento 'futuro' de la tecla pulsada
+
+- Si pulso "BACK" **salgo del programa de forma limpia**
+  
+  Aqui hay 2 opciones de implementación
+  
+  1- Saliendo del bucle while principal ==> control de flujo  [R2526CL11_ADC_pVgDisp_5F_1.py](R2526CL11_ADC_pVgDisp_5F_1.py)
+
+  2- Generando una excepción al pulsar Back y tratándola igual que cuando salía por teclado estando conectado al PC, [R2526CL11_ADC_pVgDisp_5Ex_1.py](R2526CL11_ADC_pVgDisp_5Ex_1.py) 
+
+  IMPORTANTE : no se puede lanzar la excepción desde la rutina de interrupción. [Ver ayuda de copilot](Excepcion_con_boton_MicroPy.pdf)
+
+  Vamos a hacer las 2 y aprenderemos como hacer 
+
+- Excepciones definidas por el programador y 
+- Excepciones versus control de flujo : **mejor control de Flujo**
+
+El programa refinado es el [R2526CL11_ADC_pVgDisp_5F_2.py](R2526CL11_ADC_pVgDisp_5F_2.py) ==> he elegido el control de flujo por ser mas simple, v2 con mejoras visuales
+
+
 
 ---
 
