@@ -28,14 +28,21 @@ Esta lección forma parte del los aprendizajes necesarios para controlar cargas 
 
 - Panorama de Sensores de humedad de suelo
 
-- Estudio para **calibración** del sensor de humedad de suelo tipo Sparkfun
+- **Estudio y montajes progresivos** para <u>calibración</u> del sensor de humedad de suelo tipo Sparkfun
   
-  - M#1- ADC con potenciómetro - básico + formula de mapeo
-  - M#2 - ADC con potenciómetro  un extremo a GPIO para evitar corrosión
-  - M#3
-  - M#4
-  - Calibración con M#4
-  - M#5 - mas autónoma ( sin PC)
+  Como siempre vamos hacendo ontajes que añaden funcionalidades poco a poco
+  
+  - M#1- ADC con potenciómetro - básico + f**ormula de mapeo**
+  - M#2 - ADC con potenciómetro  **un extremo a GPIO** para evitar corrosión
+  - M#3 - ADC con potenciómetro  1 extremo a GPIO + **Display**
+  - M#4 - ADC con potenciómetro 1 extremo a GPIO + Display + **letra grande**
+  - Calibración con M#4.2
+  - M#5 - mas autónoma (sin PC)
+    - Recordar manejo de pulsadores con interrupciones
+    - Leer pulsadores en M#5 : ADC con potenciómetro 1 extremo a GPIO + Display + letra grande + **pulsadores**
+    - Si pulso "BACK" salgo del programa 
+      - Excepciones definidas por el programador
+      - Excepciones versus control de flujo : **mejor control de Flujo**
 
 - TO DO y Notas
 
@@ -91,18 +98,25 @@ Seguramente 'writer.py' no estará.
 
 Todos los programas en microPython
 
-| Programa                                                           | Montaje | HW si Robotica y Notas                                                            | Objetivo de Aprendizaje                                                 |
-| ------------------------------------------------------------------ | ------- | --------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| [R2526CL11_ADC_poten_1_0.py](R2526CL11_ADC_poten_1_0.py)           | M#1     | potenciómetro pin central en ADC0, otros 2 pines +3.3v y 0volt                    | Recordar lectura ADC                                                    |
-| [R2526CL11_ADC_poten_1_1.py](R2526CL11_ADC_poten_1_1.py)           | M#1     | idem + formula mapeo mas precisa                                                  |                                                                         |
-| [R2526CL11_ADC_potVccgpio_2_0.py](R2526CL11_ADC_potVccgpio_2_0.py) | M#2     | potenciómetro uno de los ines extremso a GPIO21 -> evitar corrosión + excepciones | simular montaje de sensor  humedad con potenciómetro                    |
-| [R2526CL11_ADC_potVccgpio_2_1.py](R2526CL11_ADC_potVccgpio_2_1.py) | M#2     | mejoras de presentación , misma linea                                             | idem                                                                    |
-| [Rbhwt_sh1106_1_0.py](Rbhwt_sh1106_1_0.py)                         | M#3     | Prueba basica de HW del display SH1106                                            | requiere libreria 'sh1106.py'                                           |
-| [R2526CL11_ADC_pVgDisp_3_3.py](R2526CL11_ADC_pVgDisp_3_3.py)       | M#3     | Añadir display b/n SH1106                                                         | Hacer el montaje mas autónomo ( sin pc) + requiere libreria 'sh1106.py' |
-| [Rbhwt_sh1106_writer_1_0.py](Rbhwt_sh1106_writer_1_0.py)           | M#4     | prueba basica de letra grande en display SH1106                                   | requiere libreria 'sh1106.py' + 'writer.py' + una fuente de letra       |
-| [R2526CL11_ADC_pVgDisp_4_0.py](R2526CL11_ADC_pVgDisp_4_0.py)       | M#4     | leer pot con Vcc en gpio21 + sh1106 + letra grande                                | requiere libreria 'sh1106.py' + 'writer.py' + una fuente de letra       |
-| [R2526CL11_ADC_pVgDisp_4_1.py](R2526CL11_ADC_pVgDisp_4_1.py)       |         | idem con mejoras 1                                                                | requiere libreria 'sh1106.py' + 'writer.py' + una fuente de letra       |
-| [R2526CL11_ADC_pVgDisp_4_2.py](R2526CL11_ADC_pVgDisp_4_2.py)       |         | idem con mejoras 2                                                                |                                                                         |
+| Programa                                                           | Montaje | HW si Robotica y Notas                                                            | Objetivo de Aprendizaje                                                                 |
+| ------------------------------------------------------------------ | ------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| [R2526CL11_ADC_poten_1_0.py](R2526CL11_ADC_poten_1_0.py)           | M#1     | potenciómetro pin central en ADC0, otros 2 pines +3.3v y 0volt                    | Recordar lectura ADC                                                                    |
+| [R2526CL11_ADC_poten_1_1.py](R2526CL11_ADC_poten_1_1.py)           | M#1     | idem + formula mapeo mas precisa                                                  |                                                                                         |
+| [R2526CL11_ADC_potVccgpio_2_0.py](R2526CL11_ADC_potVccgpio_2_0.py) | M#2     | potenciómetro uno de los ines extremso a GPIO21 -> evitar corrosión + excepciones | simular montaje de sensor  humedad con potenciómetro                                    |
+| [R2526CL11_ADC_potVccgpio_2_1.py](R2526CL11_ADC_potVccgpio_2_1.py) | M#2     | mejoras de presentación , misma linea                                             | idem                                                                                    |
+| [Rbhwt_sh1106_1_0.py](Rbhwt_sh1106_1_0.py)                         | M#3     | **Prueba básica** de HW del display SH1106                                        | requiere libreria 'sh1106.py'                                                           |
+| [R2526CL11_ADC_pVgDisp_3_3.py](R2526CL11_ADC_pVgDisp_3_3.py)       | M#3     | Añadir display b/n SH1106                                                         | Hacer el montaje mas autónomo ( sin pc) + requiere libreria 'sh1106.py'                 |
+| [Rbhwt_sh1106_writer_1_0.py](Rbhwt_sh1106_writer_1_0.py)           | M#4     | **prueba basica** de letra grande en display SH1106                               | requiere libreria 'sh1106.py' + 'writer.py' + una fuente de letra                       |
+| [R2526CL11_ADC_pVgDisp_4_0.py](R2526CL11_ADC_pVgDisp_4_0.py)       | M#4     | leer pot con Vcc en gpio21 + sh1106 + letra grande                                | requiere libreria 'sh1106.py' + 'writer.py' + una fuente de letra                       |
+| [R2526CL11_ADC_pVgDisp_4_1.py](R2526CL11_ADC_pVgDisp_4_1.py)       | M#4     | idem con mejoras 1                                                                | requiere libreria 'sh1106.py' + 'writer.py' + una fuente de letra                       |
+| [R2526CL11_ADC_pVgDisp_4_2.py](R2526CL11_ADC_pVgDisp_4_2.py)       | M#4     | idem con mejoras 2                                                                |                                                                                         |
+| [Rbhwt_sh1106RE3sw_Testsw1_0.py](Rbhwt_sh1106RE3sw_Testsw1_0.py)   | M#5     | **prueba básic**a de manejo de <u>1 pulsador </u>con interrupciones               |                                                                                         |
+| [Rbhwt_sh1106RE3sw_Test3sw1_0.py](Rbhwt_sh1106RE3sw_Test3sw1_0.py) | M#5     | **prueba básic**a de manejo de <u>3 pulsadores </u>con interrupciones             | Tiene un truco l leer el pin que provoco la interrupción, esta explicado en comentarios |
+| [R2526CL11_ADC_pVgDisp_5_0.py](R2526CL11_ADC_pVgDisp_5_0.py)       | M#5     |                                                                                   |                                                                                         |
+| [R2526CL11_ADC_pVgDisp_5_1.py](R2526CL11_ADC_pVgDisp_5_1.py)       | M#5     |                                                                                   |                                                                                         |
+| [R2526CL11_ADC_pVgDisp_5F_1.py](R2526CL11_ADC_pVgDisp_5F_1.py)     | M#5     |                                                                                   |                                                                                         |
+| [R2526CL11_ADC_pVgDisp_5Ex_1.py](R2526CL11_ADC_pVgDisp_5Ex_1.py)   | M#5     |                                                                                   |                                                                                         |
+| [R2526CL11_ADC_pVgDisp_5F_2.py](R2526CL11_ADC_pVgDisp_5F_2.py)     | M#5     |                                                                                   |                                                                                         |
 
 ---
 
@@ -247,8 +261,6 @@ Tenemos un rango de 1 voltio, comenzando en 0,9 volt con la tierra seca y acaban
 
 Con la **tierra seca** , el polímetro ha medido desde 8,23 Mohm a 2,4 M ohm, en el primer caso con tierra extremadamente seca, y en el segundo con tierra tomada del campo, contando que habia llovido hacia unos días, con una lectura de 0,92 volt
 
-
-
 Las **puntas del sensor introducidas en agua del grifo** han dado **1,95 volt**, pendiente media de resitencia
 
 | Tierra SECA Extrema - solo medida de resistencia                     | Tierra del campo (lluvias hace días) : 0,92volt y 2,4 Mohm           |
@@ -259,11 +271,19 @@ Las **puntas del sensor introducidas en agua del grifo** han dado **1,95 volt**,
 
 ### M#5 - Dar autonomía al montaje =  sin PC
 
-Ahora que el display da los resultados de forma fiable, para hacer mas autonomo el montaje :
+Ahora que el display da los resultados de forma fiable, para hacer mas autónomo el montaje :
 
-1. El **cierre del programa** ya no puede ser por teclado del PC --> pulsador de display 'BACK'. necesitamos incluir los pulsadores para comandar el programa , o al menso 1 pulsador
+1. El **cierre del programa** ya no puede ser por teclado del PC --> **pulsador de display 'BACK'**. necesitamos incluir los pulsadores para comandar el programa , o al menso 1 pulsador
 
 2. **SIN PC** : Probar con el programa en Pico con nombre 'main.py' + power bank de 5 volt o similar
+
+Pasos que vamos a seguir
+
+- Recordar manejo de pulsadores con interrupciones
+- Leer pulsadores en M#5 : ADC con potenciómetro 1 extremo a GPIO + Display + letra grande + **leo pulsadores**
+- Si pulso "BACK" salgo del programa
+  - Excepciones definidas por el programador
+  - Excepciones versus control de flujo : **mejor control de Flujo**
 
 ---
 

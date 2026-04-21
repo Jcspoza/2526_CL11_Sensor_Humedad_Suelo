@@ -29,10 +29,10 @@ print(f"Program: {p_project} - Version: {p_version}")
 POTENCIOMETRO_ADC = 0 # es el ADC0
 potentiometer = machine.ADC(POTENCIOMETRO_ADC)
 alimentaSensor = machine.Pin(21, machine.Pin.OUT)
-MAXVOLT = 3.05
+MAXVOLT = 3.28
 FACTOR_CONVERSION = MAXVOLT / (65535)
 TIEMPOHIGH = 0.1
-ESPERA = 0.4
+ESPERA = 5
 
 # 2- Bucle de lectura
 try:
